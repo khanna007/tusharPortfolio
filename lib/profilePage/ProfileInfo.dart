@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:myportfolio/utils/ResponsiveWidget.dart';
+import 'package:myportfolio/utils/style.dart';
 
 class ProfileInfo extends StatelessWidget {
   profileImage(context) => Container(
-    height: ResponsiveWidget.isSmallScreen(context)
-        ? MediaQuery.of(context).size.height * 0.25
-        : MediaQuery.of(context).size.width * 0.25,
-    width: ResponsiveWidget.isSmallScreen(context)
-        ? MediaQuery.of(context).size.height * 0.25
-        : MediaQuery.of(context).size.width * 0.25,
-    decoration: BoxDecoration(
-      backgroundBlendMode: BlendMode.luminosity,
-      color: Colors.deepOrange,
+        height: ResponsiveWidget.isSmallScreen(context)
+            ? MediaQuery.of(context).size.height * 0.25
+            : MediaQuery.of(context).size.width * 0.25,
+        width: ResponsiveWidget.isSmallScreen(context)
+            ? MediaQuery.of(context).size.height * 0.25
+            : MediaQuery.of(context).size.width * 0.25,
+        decoration: BoxDecoration(
+          backgroundBlendMode: BlendMode.luminosity,
+          color: Colors.deepOrange,
 //            borderRadius: BorderRadius.circular(40),
-      shape: BoxShape.circle,
-      image: DecorationImage(
-        image: AssetImage("tush.jpg"),
-        alignment: Alignment.center,
-        fit: BoxFit.cover,
-      ),
-    ),
-  );
+          shape: BoxShape.circle,
+          image: DecorationImage(
+            image: AssetImage("tush.jpg"),
+            alignment: Alignment.center,
+            fit: BoxFit.cover,
+          ),
+        ),
+      );
 
   final profileData = Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,10 +29,10 @@ class ProfileInfo extends StatelessWidget {
       Text(
         "Hi there! My name is",
         textScaleFactor: 2,
-        style: TextStyle(color: Colors.orange),
+        style: TextStyle(color: Colors.white),
       ),
       Text(
-        "Tushar\nKhanna",
+        "Tushar Khanna",
         textScaleFactor: 5,
         style: TextStyle(
           color: Colors.white,
@@ -42,16 +43,33 @@ class ProfileInfo extends StatelessWidget {
         height: 10,
       ),
       Text(
-        "I am an Application developer having experince of 2 years\n"
-            "I am also a volenteer of Laraverl Delhi.\n"
-            "Also take parts in meetups like android flutter laravel and Ng-India.\n"
-            "I am also part of seekgeeks community and contribute code in it",
+        "I am app developer having an experince of 2 years\n"
+        "I am also a volenteer of Laraverl Delhi.\n"
+        "Also take part in meetups like android flutter laravel and Ng-India.\n"
+        "I am also part of seekgeeks community and contribute code in it.\n"
+        "My Quote - make your life easier while coding ",
         softWrap: true,
         textScaleFactor: 1.5,
-        style: TextStyle(color: Colors.white70),
+        style: Style.text3,
       ),
       SizedBox(
         height: 20,
+      ),
+      RaisedButton(
+        child: Container(
+          child: Row(
+            children: <Widget>[
+              Icon(
+                Icons.file_download,
+                color: Colors.white,
+              ),
+              Text(
+                "Download Resume",
+                style: Style.resume,
+              ),
+            ],
+          ),
+        ),
       ),
     ],
   );
@@ -72,7 +90,7 @@ class ProfileInfo extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.1,
           ),
-          profileData
+          profileData,
         ],
       ),
     );

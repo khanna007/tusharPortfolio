@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:myportfolio/utils/ResponsiveWidget.dart';
 import 'package:myportfolio/utils/rediect.dart';
 import 'package:myportfolio/utils/style.dart';
-import 'package:myportfolio/work/Work.dart';
 
-class SocialInfo extends StatelessWidget {
+class WorkScreens extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveWidget(
@@ -14,16 +13,21 @@ class SocialInfo extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Icon(
-                Icons.file_download,
+              NavButton(
+                text: "Work",
+                onPressed: () {
+
+                },
                 color: Colors.white,
               ),
-              Icon(
-                Icons.file_download,
+              NavButton(
+                text: "Twitter",
+                onPressed: () {},
                 color: Colors.white,
               ),
-              Icon(
-                Icons.file_download,
+              NavButton(
+                text: "Facebook",
+                onPressed: () {},
                 color: Colors.white,
               ),
             ],
