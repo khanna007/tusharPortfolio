@@ -15,4 +15,14 @@ class Style {
     fontSize: 25.0,
     fontWeight: FontWeight.bold,
   );
+  static final text2 = baseTextStyle.copyWith(
+    color: Colors.black,
+    fontSize: 25.0,
+    fontWeight: FontWeight.bold,
+  );
+  static final and = baseTextStyle.copyWith(
+    color: Colors.black,
+    fontSize: 20.0,
+    fontWeight: FontWeight.bold,
+  );
 }

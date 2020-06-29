@@ -1,27 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:myportfolio/utils/ResponsiveWidget.dart';
+import 'package:myportfolio/utils/rediect.dart';
+import 'package:myportfolio/utils/style.dart';
+import 'package:myportfolio/work/Work.dart';
 
 class SocialInfo extends StatelessWidget {
-  List<Widget> socialMediaWidgets() {
-    return [
-      NavButton(
-        text: "Github",
-        onPressed: () {},
-        color: Colors.blue,
-      ),
-      NavButton(
-        text: "Twitter",
-        onPressed: () {},
-        color: Colors.blue,
-      ),
-      NavButton(
-        text: "Facebook",
-        onPressed: () {},
-        color: Colors.blue,
-      ),
-    ];
-  }
-
   @override
   Widget build(BuildContext context) {
     return ResponsiveWidget(
@@ -30,13 +13,27 @@ class SocialInfo extends StatelessWidget {
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: socialMediaWidgets(),
+            children: [
+              NavButton(
+                text: "Work",
+                onPressed: () {
+                  Redirect().push(context, Work());
+                },
+                color: Colors.white,
+              ),
+              NavButton(
+                text: "Twitter",
+                onPressed: () {},
+                color: Colors.white,
+              ),
+              NavButton(
+                text: "Facebook",
+                onPressed: () {},
+                color: Colors.white,
+              ),
+            ],
           ),
         ],
-      ),
-      smallScreen: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[],
       ),
     );
   }
@@ -49,15 +46,18 @@ class NavButton extends StatelessWidget {
 
   const NavButton(
       {Key key,
-        @required this.text,
-        @required this.onPressed,
-        this.color = Colors.orange})
+      @required this.text,
+      @required this.onPressed,
+      this.color = Colors.orange})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return OutlineButton(
-      child: Text(text),
+      child: Text(
+        text,
+        style: Style.myName,
+      ),
       borderSide: BorderSide(
         color: color,
       ),

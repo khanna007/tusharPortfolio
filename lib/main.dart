@@ -3,6 +3,7 @@ import 'package:myportfolio/drawer/drawerWidget.dart';
 import 'package:myportfolio/profilePage/ProfileInfo.dart';
 import 'package:myportfolio/socialInfo/SocialInfo.dart';
 import 'package:myportfolio/utils/ResponsiveWidget.dart';
+import 'package:myportfolio/work/Work.dart';
 
 void main() => runApp(MyApp());
 
@@ -55,6 +56,13 @@ class ProfilePage extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.01,
                   ),
                   ProfileInfo(),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.3,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 50),
+                  ),
+                  Work(),
                 ],
               ),
             ),
