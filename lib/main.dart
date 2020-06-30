@@ -55,8 +55,6 @@ class ProfilePage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
-                        SocialInfo(),
-                        Spacer(),
                         WorkScreens(),
                       ],
                     ),

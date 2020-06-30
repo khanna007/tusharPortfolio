@@ -39,6 +39,49 @@ class ProfileInfo extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
+      Row(
+        children: <Widget>[
+          Icon(
+            Icons.mail,
+            size: 30,
+            color: Colors.white,
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 10),
+          ),
+          Text(
+            "Tusharkhanna007@gmail.com",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+      Padding(
+        padding: EdgeInsets.only(top: 10),
+      ),
+      Row(
+        children: <Widget>[
+          Icon(
+            Icons.phone,
+            size: 30,
+            color: Colors.white,
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 10),
+          ),
+          Text(
+            "91- 7338768387 / 8800160243",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
       SizedBox(
         height: 10,
       ),
@@ -55,22 +98,22 @@ class ProfileInfo extends StatelessWidget {
       SizedBox(
         height: 20,
       ),
-      RaisedButton(
-        child: Container(
-          child: Row(
-            children: <Widget>[
-              Icon(
-                Icons.file_download,
-                color: Colors.white,
-              ),
-              Text(
-                "Download Resume",
-                style: Style.resume,
-              ),
-            ],
-          ),
-        ),
-      ),
+//      RaisedButton(
+//        child: Container(
+//          child: Row(
+//            children: <Widget>[
+//              Icon(
+//                Icons.file_download,
+//                color: Colors.white,
+//              ),
+//              Text(
+//                "Download Resume",
+//                style: Style.resume,
+//              ),
+//            ],
+//          ),
+//        ),
+//      ),
     ],
   );
 

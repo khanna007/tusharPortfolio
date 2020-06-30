@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:myportfolio/utils/ResponsiveWidget.dart';
-import 'package:myportfolio/utils/rediect.dart';
 import 'package:myportfolio/utils/style.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class WorkScreens extends StatelessWidget {
   @override
@@ -14,20 +15,58 @@ class WorkScreens extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               NavButton(
-                text: "Work",
-                onPressed: () {
-
+                icon: FontAwesomeIcons.github,
+                onPressed: () async {
+                  if (await canLaunch("https://github.com/khanna007")) {
+                    await launch(
+                      "https://www.linkedin.com/in/khanna007/",
+                      forceSafariVC: false,
+                      forceWebView: false,
+                      headers: <String, String>{
+                        'my_header_key': 'my_header_value'
+                      },
+                    );
+                  } else {
+                    throw 'Could not launch ${"https://github.com/khanna007"}';
+                  }
                 },
                 color: Colors.white,
               ),
               NavButton(
-                text: "Twitter",
-                onPressed: () {},
+                icon: FontAwesomeIcons.twitter,
+                onPressed: () async {
+                  if (await canLaunch("https://twitter.com/Tkhanna007")) {
+                    await launch(
+                      "https://www.linkedin.com/in/khanna007/",
+                      forceSafariVC: false,
+                      forceWebView: false,
+                      headers: <String, String>{
+                        'my_header_key': 'my_header_value'
+                      },
+                    );
+                  } else {
+                    throw 'Could not launch ${"https://twitter.com/Tkhanna007"}';
+                  }
+                },
                 color: Colors.white,
               ),
               NavButton(
-                text: "Facebook",
-                onPressed: () {},
+                icon: FontAwesomeIcons.linkedin,
+                onPressed: () async {
+                  if (await canLaunch(
+                      "https://www.linkedin.com/in/khanna007/")) {
+                    await launch(
+                      "https://www.linkedin.com/in/khanna007/",
+                      forceSafariVC: false,
+                      forceWebView: false,
+                      headers: <String, String>{
+                        'my_header_key': 'my_header_value'
+                      },
+                    );
+                  } else {
+                    throw 'Could not launch ${"https://www.linkedin.com/in/khanna007/"}';
+                  }
+                },
                 color: Colors.white,
               ),
             ],
@@ -39,13 +78,13 @@ class WorkScreens extends StatelessWidget {
 }
 
 class NavButton extends StatelessWidget {
-  final text;
+  final icon;
   final onPressed;
   final Color color;
 
   const NavButton(
       {Key key,
-      @required this.text,
+      @required this.icon,
       @required this.onPressed,
       this.color = Colors.orange})
       : super(key: key);
@@ -53,9 +92,9 @@ class NavButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OutlineButton(
-      child: Text(
-        text,
-        style: Style.myName,
+      child: Icon(
+        icon,
+        color: Colors.white,
       ),
       borderSide: BorderSide(
         color: color,
