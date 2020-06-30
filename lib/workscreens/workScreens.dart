@@ -19,7 +19,7 @@ class WorkScreens extends StatelessWidget {
                 onPressed: () async {
                   if (await canLaunch("https://github.com/khanna007")) {
                     await launch(
-                      "https://www.linkedin.com/in/khanna007/",
+                      "https://github.com/khanna007",
                       forceSafariVC: false,
                       forceWebView: false,
                       headers: <String, String>{
@@ -37,7 +37,7 @@ class WorkScreens extends StatelessWidget {
                 onPressed: () async {
                   if (await canLaunch("https://twitter.com/Tkhanna007")) {
                     await launch(
-                      "https://www.linkedin.com/in/khanna007/",
+                      "https://twitter.com/Tkhanna007",
                       forceSafariVC: false,
                       forceWebView: false,
                       headers: <String, String>{

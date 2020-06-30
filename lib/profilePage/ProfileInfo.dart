@@ -86,7 +86,7 @@ class ProfileInfo extends StatelessWidget {
         height: 10,
       ),
       Text(
-        "I am app developer having an experince of 2 years\n"
+        "I am app developer having an experince of 2.5 years\n"
         "I am also a volenteer of Laraverl Delhi.\n"
         "Also take part in meetups like android flutter laravel and Ng-India.\n"
         "I am also part of seekgeeks community and contribute code in it.\n"
