@@ -202,6 +202,7 @@ class Work extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10),
                   ),
                   Text(
+                    "- Project name: Hiremilitary Jobs \n\n"
                     "- Maintained project code \n\n"
                     "- Implemented Maps \n\n"
                     "- Integrated code for launching one app to another app\n\n",
@@ -241,6 +242,7 @@ class Work extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10),
                   ),
                   Text(
+                    "- Project name: Hiremilitary Intern \n\n"
                     "- Maintained project code \n\n"
                     "- Implemented Maps \n\n"
                     "- Integrated code for launching one app to another app\n\n"
@@ -265,7 +267,7 @@ class Work extends StatelessWidget {
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(10.0))),
       child: Container(
-        height: 350.0,
+        height: 380.0,
         width: 300.0,
         child: Stack(
           children: <Widget>[
@@ -281,6 +283,7 @@ class Work extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10),
                   ),
                   Text(
+                    "- Project name: SafetifyMe \n\n"
                     "- Planning for project and timeline\n\n"
                     "- Implemeted Razorpay\n\n"
                     "- Implemented Maps \n\n"
@@ -308,7 +311,7 @@ class Work extends StatelessWidget {
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(10.0))),
       child: Container(
-        height: 430.0,
+        height: 480.0,
         width: 300.0,
         child: Stack(
           children: <Widget>[
@@ -324,6 +327,7 @@ class Work extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10),
                   ),
                   Text(
+                    "- Project name: SafetifyMePartner \n\n"
                     "- Planning for project and timeline\n\n"
                     "- Accept and decilne of booking \n\n"
                     "- Show notifications for daily basis tasks\n\n"
@@ -353,7 +357,7 @@ class Work extends StatelessWidget {
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(10.0))),
       child: Container(
-        height: 320.0,
+        height: 350.0,
         width: 300.0,
         child: Stack(
           children: <Widget>[
@@ -369,6 +373,7 @@ class Work extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10),
                   ),
                   Text(
+                    "- Project name: MobiHub \n\n"
                     "- Planning for new modules\n\n"
                     "- Implemeted paypal in Android \n\n"
                     "- Do refactoring of the code\n\n"
